@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,25 +21,34 @@
             android:textColor="#DD3F0D"
             android:gravity="center"/>
 
-        <TextView
-            android:id="@+id/user_name_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Name"
-            android:textSize="28sp"
-            android:textColor="@color/purple_500"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
-            android:gravity="left"/>
+
 
         <EditText
             android:id="@+id/name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:outlineSpotShadowColor="#aa45d2"
+            android:inputType="text"
             android:hint="enter your name"
             android:layout_margin="30dp"
             />
+
+        <Button
+            android:id="@+id/name_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click here to continue"
+            android:layout_margin="40dp"/>
+
+        <TextView
+            android:id="@+id/user_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:inputType="text"
+            android:textColor="@color/purple_500"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="left"/>
 
         <Switch
             android:id="@+id/full_age_switch"
@@ -60,6 +68,7 @@
             android:text="Mark the following if true:"/>
 
         <CheckBox
+            android:id="@+id/student_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I am a GB Student"
@@ -67,6 +76,7 @@
             android:textStyle="italic"/>
 
         <CheckBox
+            android:id="@+id/professional_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I am a professional developer"
@@ -75,13 +85,20 @@
 
 
         <Button
-            android:id="@+id/test_button"
+            android:id="@+id/continue_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:text="CONTINUE"/>
 
+        <CalendarView
+            android:id="@+id/date_calendar_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:selectedWeekBackgroundColor="#22ba5c"
+            />
 
     </LinearLayout>
+
 </ScrollView>
