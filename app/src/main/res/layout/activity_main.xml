@@ -1,18 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/user_information_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginTop="35dp"
+            android:text="User's personal information"
+            android:textColor="#DD3F0D"
+            android:gravity="center"/>
+
+
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="enter your name"
+            android:layout_margin="30dp"
+            />
+
+        <Button
+            android:id="@+id/name_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click here to continue"
+            android:layout_margin="40dp"/>
+
+        <TextView
+            android:id="@+id/user_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:inputType="text"
+            android:textColor="@color/purple_500"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="left"/>
+
+        <Switch
+            android:id="@+id/full_age_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textOn="YES"
+            android:textOff="NO"
+            android:text="Are you 18 years old and more?"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_margin="16dp"
+            android:text="Mark the following if true:"/>
+
+        <CheckBox
+            android:id="@+id/student_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I am a GB Student"
+            android:textSize="20sp"
+            android:textStyle="italic"/>
+
+        <CheckBox
+            android:id="@+id/professional_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I am a professional developer"
+            android:textSize="20sp"
+            android:textStyle="italic"/>
+
+
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="CONTINUE"/>
+
+        <CalendarView
+            android:id="@+id/date_calendar_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:selectedWeekBackgroundColor="#22ba5c"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
